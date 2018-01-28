@@ -11,10 +11,8 @@ export function fetchTopicsfromServer() {
 }
 
 function* fetchTopics() {
-  console.log('Fetch topics call')
   try {
     const topics = yield call(fetchTopicsfromServer);
-    console.log('TOPICS from the server', topics);
     yield put(requestTopicsSuccedded(topics)); 
   } catch (e) {
     yield put(requestTopicsFailed('request failed', e.message));  
