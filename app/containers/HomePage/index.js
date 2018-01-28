@@ -12,15 +12,19 @@
 import React from 'react';
 import messages from './messages';
 import NavigationContainer from '../NavigationContainer'
-import LinkListContainer from '../LinkListContainer'
+// import LinkListContainer from '../LinkListContainer'
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  static propTypes = {
+    children: React.PropTypes.element.isRequired
+  }
 
   render() {
     return (
       <div>
         <NavigationContainer />
-        <LinkListContainer />
+        {/* <LinkListContainer /> */}
+        { this.props.children }
       </div>
     );
   }

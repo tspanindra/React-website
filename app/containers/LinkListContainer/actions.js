@@ -6,7 +6,8 @@
 
 import {
   REQUEST_LINKS_SUCCEEDED,
-  REQUEST_LINKS_FAILED
+  REQUEST_LINKS_FAILED,
+  REQUEST_LINKS
 } from './constants';
 
 export function requestLinksSucceeded(links) {
@@ -22,4 +23,12 @@ export function requestLinksFailed(message) {
     message
   };
 }
+
+export function requestLinks(topicName) {
+  return {
+    type: REQUEST_LINKS,
+    topicName
+  };
+}
+
 
