@@ -24,6 +24,8 @@ function navigationContainerReducer(state = initialState, action) {
       return state;
     case REQUEST_TOPICS_SUCCEEDED:
       return state.set('topics', action.topics);
+    case '@@router/LOCATION_CHANGE':
+      return state.set('routeLocation', action.payload.pathname);
     case REQUEST_TOPICS_FAILED:
       return state;
     case SELECT_TOPIC:
