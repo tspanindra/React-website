@@ -26,7 +26,7 @@ function Navigation({ topics, selectTopic, toggleDrawer, isDrawerOpen }) {
     itemKey = "name"
     isDrawerOpen = {isDrawerOpen}
     />
-      {topicNodes}
+      {/* {topicNodes} */}
     </div>
   );
 }
