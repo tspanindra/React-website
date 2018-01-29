@@ -22,7 +22,6 @@ function* fetchTopics() {
 }
 
 function* pushTopic(action) {
-  console.log(action.topic);
   yield put(push(`/topics/${action.topic.name}`));
 }
 
