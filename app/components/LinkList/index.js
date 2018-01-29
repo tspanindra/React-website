@@ -8,7 +8,7 @@ import React from 'react';
 import Link from '../Link';
 import styles from './styles.css';
 
-function LinkList({ links, topicName }) {
+function LinkList({ links, topicName, children }) {
   const linkNodes = links.map( l => (
   <Link 
     key={l.id}
@@ -20,6 +20,7 @@ function LinkList({ links, topicName }) {
     <div className={styles.linkList}>
       <h1> {topicName} </h1>
       {linkNodes}
+      {children}
     </div>
   );
 }
@@ -30,7 +31,8 @@ LinkList.propTypes = {
     description: React.PropTypes.string.isRequired,
     url: React.PropTypes.string.isRequired,
     id: React.PropTypes.string.isRequired 
-  }))
+  })),
+  children:React.PropTypes.element 
 }
 
 export default LinkList;

@@ -7,13 +7,13 @@
 import React from 'react';
 import validator from 'email-validator';
 import styles from './styles.css';
-import classNames from 'classnames';
+import TextInput from '../TextInput';
 
 class Login extends React.Component { // eslint-disable-line react/prefer-stateless-function
   state = {};
   
   login = () => {
-    const email = this.emailField.value;
+    const email = this.emailField.value();
     if(!validator.validate(email)) {
       this.setState({'errorText': 'Please provide a valid email'});
       return;
@@ -25,26 +25,17 @@ class Login extends React.Component { // eslint-disable-line react/prefer-statel
   }
 
   render() {
-    const fieldError = this.state.errorText ? (
-      <div className={styles.errorMessage} >
-        {this.state.errorText}
-      </div>
-    ): null;
-
     return (
       <div className={styles.login}>
         <div className={styles.heading}>
           Login with your email        
         </div>
 
-        <input
-          className={classNames(styles.input, { [styles.inputError]: this.state.errorText })}
+        <TextInput
           placeholder="Your email"
           ref={(f) => {this.emailField = f;}}
-          type="text"
+          errorText={this.state.errorText}
         />
-
-        {fieldError}
 
         <div  
           className={styles.actionContainer} >
