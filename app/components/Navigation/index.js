@@ -20,11 +20,11 @@ function Navigation({ topics, selectTopic, toggleDrawer, isDrawerOpen, email }) 
     <div className={styles.navigation}>
     <AppBar toggleDrawer= {toggleDrawer} email={email}/>
     <Drawer
-    items = {topics}
-    selectItem = {selectTopic}
-    itemLabelAttr = "name"
-    itemKey = "name"
-    isDrawerOpen = {isDrawerOpen}
+      items = {topics}
+      selectItem = {selectTopic}
+      itemLabelAttr = "name"
+      itemKey = "name"
+      isDrawerOpen = {isDrawerOpen}
     />
       {/* {topicNodes} */}
     </div>

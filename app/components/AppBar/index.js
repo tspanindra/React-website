@@ -24,7 +24,7 @@ function AppBar({ toggleDrawer, email }) {
       <div 
         className={styles.heading}
       >
-      Coder daily
+      Megha Krishnamurthy
       </div>
 
       <div 

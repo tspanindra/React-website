@@ -7,18 +7,7 @@
 	margin-top: 20px;
 }
 
-.votingContainer {
-	padding: 15px
-}
-
-.votingCount {
-	font-size: 20px;
-	text-align: center;
-	padding-bottom: 5px;
-	padding-top: 5px;
-}
-
-.detailContainer {
+.detailsContainer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -26,12 +15,15 @@
 	font-size: 16px;
 }
 
-.description {
-	color: #757575
+.title {
+	color: black;
+	text-decoration: underline;
+	padding-bottom: 10px;	
 }
 
-.votinIcon {
-	font-size: 40px;
+.description {
+	color: #757575;
+	margin-right: 15px;
 }
 
 .linkAnchor {
