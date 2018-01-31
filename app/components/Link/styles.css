@@ -17,8 +17,8 @@
 
 .title {
 	color: black;
-	text-decoration: underline;
-	padding-bottom: 10px;	
+	padding-bottom: 10px;
+	font-weight: bold;
 }
 
 .description {

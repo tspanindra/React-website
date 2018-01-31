@@ -47,10 +47,6 @@ class LinkForm extends React.Component { // eslint-disable-line react/prefer-sta
     })
   }
 
-  onCancel = () => {
-
-  }
-
   render() {
     return (
       <div className={styles.overlay} >

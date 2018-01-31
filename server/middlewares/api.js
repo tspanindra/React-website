@@ -90,13 +90,31 @@ function setupDb() {
 
 
   db.get('links').push({
-    description: 'Go find some news yourself!',
-    title: 'Go find some news yourself!',
-    url: 'https://google.com',
+    description: 'Courses Completed: \
+    Algorithms and Data Structures, KnowledgeDiscovery in Databases, Software system Design and Implementation, Cloud computing for data analysis, Mobile Application development, Machine Learning',
+    title: 'Masters in Computer Science and Engineering (Jan 2017 - Dec 2018)',
+    url: 'https://www.uncc.edu/',
     topicName: topic3.name,
     id: uuid(),
   }).value();
 
+  db.get('links').push({
+    description: 'Courses Completed: \
+    Database Systems, Java, Object Oriented Programming (OOP), Software Engineering, Data Structures, Computer Networks, Web application development',
+    title: 'Bachelors in Computer Science and Engineering (Sep 2011 - Jun 2015)',
+    url: 'http://www.sit.ac.in/',
+    topicName: topic3.name,
+    id: uuid(),
+  }).value();
+  
+  db.get('links').push({
+    description: 'Courses Completed: \
+    Physics, Chemistry, Maths, Biology',
+    title: 'Higher Secondary Education (Jun 2009 - May 2011)',
+    url: 'https://google.com',
+    topicName: topic3.name,
+    id: uuid(),
+  }).value();
   return db;
 }
 

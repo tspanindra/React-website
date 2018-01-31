@@ -27,6 +27,7 @@ function Navigation({ topics, selectTopic, toggleDrawer, isDrawerOpen, email }) 
       isDrawerOpen = {isDrawerOpen}
     />
       {/* {topicNodes} */}
+    
     </div>
   );
 }
