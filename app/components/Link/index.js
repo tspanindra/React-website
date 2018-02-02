@@ -24,7 +24,6 @@ function Link({ link }) {
         <div>
           <a href={link.url} className={styles.linkAnchor}> {link.url} </a>
         </div>
-
         
       </div>
     </div>
@@ -35,7 +34,7 @@ Link.prototype = {
   link: React.PropTypes.shape({
     description: React.PropTypes.string.isRequired,
     title: React.PropTypes.string.isRequired, 
-    url: React.PropTypes.string.isRequired,
+    url: React.PropTypes.string,
     id: React.PropTypes.string.isRequired 
   })
 };

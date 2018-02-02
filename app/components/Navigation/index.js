@@ -15,6 +15,8 @@ function Navigation({ topics, selectTopic, toggleDrawer, isDrawerOpen, email }) 
       {t.name}
     </div>
   ));
+  // const selectedTopicName = 'About';
+  // selectTopic(topics[0]);
 
   return (
     <div className={styles.navigation}>

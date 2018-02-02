@@ -15,7 +15,9 @@ import {
 
 const initialState = fromJS({
   topics : [],
-  isDrawerOpen : false
+  isDrawerOpen : false,
+  selectedTopic: 'About'
+
 });
 
 function navigationContainerReducer(state = initialState, action) {

@@ -101,7 +101,7 @@ LinkList.propTypes = {
   links: React.PropTypes.arrayOf(React.PropTypes.shape({
     title: React.PropTypes.string,
     description: React.PropTypes.string.isRequired,
-    url: React.PropTypes.string.isRequired,
+    url: React.PropTypes.string,
     id: React.PropTypes.string.isRequired 
   })),
   children:React.PropTypes.element,

@@ -35,18 +35,15 @@ function setupDb() {
   db.get('topics').push(topic4).value();
 
   db.get('links').push({
-    description: 'The very library we are working with now',
-    url: 'https://github.com/facebook/react',
+    description: 'I am a Graduate Student in the Computer Science Department in the College of Computing and Informatics at the University of North Carolina - Charlotte (UNCC). \n \
+    My technical and research interests are in the areas of Data Science, Natural Language Processing, Cloud Computing and Application Development.\
+    I have a work experience of 1.5 years in IT sector of one of the biggest french banking company Societe Generale as a Software Engineer. \
+    I received my Bachelors in Computer Science from Siddaganga Institute Of Technology Tumkur.\
+    My hobbies includes listening to music, learning new things, hiking.',
     topicName: topic1.name,
     id: uuid(),
   }).value();
 
-  db.get('links').push({
-    description: 'Some old videos',
-    url: 'http://tagtree.io',
-    topicName: topic1.name,
-    id: uuid(),
-  }).value();
 
   db.get('links').push({
     description: 'Networking application which aims at controlling the network traffic by defining and controlling the network functionality - based on the information gathered using Deep Packet Inspection.',
