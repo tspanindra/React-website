@@ -35,11 +35,10 @@ function setupDb() {
   db.get('topics').push(topic4).value();
 
   db.get('links').push({
-    description: 'I am a Graduate Student in the Computer Science Department in the College of Computing and Informatics at the University of North Carolina - Charlotte (UNCC). \n \
-    My technical and research interests are in the areas of Data Science, Natural Language Processing, Cloud Computing and Application Development.\
-    I have a work experience of 1.5 years in IT sector of one of the biggest french banking company Societe Generale as a Software Engineer. \
-    I received my Bachelors in Computer Science from Siddaganga Institute Of Technology Tumkur.\
-    My hobbies includes listening to music, learning new things, hiking.',
+    description: 'I am a Computer Science Graduate Student from University of North Carolina, having 4 years of academic & 1.5 years of Industry experience in programming, \
+    I am an avid learner and an enthusiastic developer with experience in Mobile & Web application development! \
+    Also gained hands on experience in Cloud Computing frameworks like Hadoop MapReduce, Apache Spark and Machine Learning.\
+    My technical and research interests are in the areas of Mobile/ Web development and Data Science. I believe syncing work cognitively and physically will expand the idea of "success" immensely.',
     topicName: topic1.name,
     id: uuid(),
   }).value();
