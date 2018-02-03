@@ -12,7 +12,6 @@
 import React from 'react';
 import messages from './messages';
 import NavigationContainer from '../NavigationContainer'
-// import LinkListContainer from '../LinkListContainer'
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
@@ -23,7 +22,6 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     return (
       <div>
         <NavigationContainer />
-        {/* <LinkListContainer /> */}
         { this.props.children }
       </div>
     );

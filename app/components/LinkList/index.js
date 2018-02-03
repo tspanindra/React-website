@@ -51,7 +51,6 @@ class LinkList extends React.Component {
             <SearchComponent
               links={this.props.links}
               setLinks={this.setLinks}/>
-
           </div>
         )}
 
