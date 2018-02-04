@@ -10,6 +10,7 @@ import selectLinkListContainer from './selectors';
 import LinkList from '../../components/LinkList';
 import { requestLinks, startAdd } from './actions';
 import { toggleDrawer } from '../NavigationContainer/actions';
+// import ImageSlideShow from '../../Components/ImageSlideShow';
 
 export class LinkListContainer extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -35,7 +36,9 @@ export class LinkListContainer extends React.Component { // eslint-disable-line 
 
   render() {
     return (
+      
       <div onClick={this.onHomeClick}>
+        {/* { this.props.topicName=== 'About' && <ImageSlideShow /> } */}
         <LinkList {...this.props}/>
       </div>
     );

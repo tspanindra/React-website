@@ -46,6 +46,7 @@ function setupDb() {
     Also gained hands on experience in Cloud Computing frameworks like Hadoop MapReduce, Apache Spark and Machine Learning.\
     My technical and research interests are in the areas of Mobile/ Web development and Data Science. I believe syncing work cognitively and physically will expand the idea of "success" immensely.',
     topicName: topic1.name,
+    showFlashCard: true,
     id: uuid(),
   }).value();
 

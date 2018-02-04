@@ -8,8 +8,11 @@
 }
 
 .flashCard {
-	margin: auto;
-	width: 50%;
+	display: flex;
+	margin-bottom: 20px;
+	/* margin-left: 250px; */
+	padding: 10px;
+	/* width: 50%; */
 }
 
 .detailsContainer {

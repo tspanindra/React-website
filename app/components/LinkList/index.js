@@ -10,6 +10,7 @@ import styles from "./styles.css";
 import IconButton from "../IconButton";
 import DropDownComponent from '../DropDownComponent';
 import SearchComponent from '../SearchComponent';
+import ImageSlideShow from '../ImageSlideShow';
 
 class LinkList extends React.Component {
   constructor() {
@@ -40,8 +41,9 @@ class LinkList extends React.Component {
 
     return (
       <div className={styles.linkList}>
-        <h1> {topicName} </h1>
-        
+        <h1 className={styles.heading}> {topicName} </h1>
+        { topicName=== 'About' && <ImageSlideShow /> }
+
         {topicName === "Projects" && (
           <div>
             <DropDownComponent 
@@ -53,7 +55,6 @@ class LinkList extends React.Component {
               setLinks={this.setLinks}/>
           </div>
         )}
-
         {this.linkNodes()}
 
         <IconButton

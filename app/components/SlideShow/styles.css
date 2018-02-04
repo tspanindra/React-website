@@ -1,0 +1,64 @@
+.slideshow {
+  /* float: left; */
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.bullets {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 800ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 800ms ease-in;
+}
+
+.group {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.group > * {
+  position: absolute;
+  top: 10px;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
