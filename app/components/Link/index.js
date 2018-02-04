@@ -5,13 +5,12 @@
 */
 
 import React from 'react';
-
-
+import classNames from 'classnames';
 import styles from './styles.css';
 
-function Link({ link }) {
+function Link({ link, showFlashCard }) {
   return (
-    <div className={styles.link}>
+    <div className={classNames(styles.link, { [styles.flashCard]: showFlashCard} )}>
       <div className={styles.detailsContainer}>
         <div className={styles.title}>
           {link.title}
@@ -36,6 +35,7 @@ Link.prototype = {
     title: React.PropTypes.string.isRequired, 
     url: React.PropTypes.string,
     id: React.PropTypes.string.isRequired 
-  })
+  }),
+  showFlashCard: React.PropTypes.bool
 };
 export default Link;

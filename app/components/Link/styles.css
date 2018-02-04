@@ -7,6 +7,11 @@
 	margin-top: 20px;
 }
 
+.flashCard {
+	margin: auto;
+	width: 50%;
+}
+
 .detailsContainer {
 	display: flex;
 	flex-direction: column;

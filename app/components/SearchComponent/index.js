@@ -36,7 +36,7 @@ export default class SearchComponent extends PureComponent {
 
       setLinks(selLinks);
     } else {
-      setLinks(selLinks);
+      setLinks(links);
     }
   }, 300);
 

@@ -32,7 +32,7 @@ class LinkList extends React.Component {
 
   linkNodes = () => {
     const { links } = this.state;
-    return links ? links.map(l => <Link key={l.id} link={l} />) : null;
+    return links ? links.map(l => <Link key={l.id} link={l} showFlashCard={l.showFlashCard} />) : null;
   };
 
   render() {

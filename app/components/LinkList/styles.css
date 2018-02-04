@@ -1,5 +1,6 @@
 .linkList { /* stylelint-disable */
-
+    align-items: center;
+    justify-content: center;
 }
 
 .button {
