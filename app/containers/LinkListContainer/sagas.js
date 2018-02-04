@@ -11,7 +11,16 @@ function fetchLinksFromServer(topicName) {
 
 function* fetchLinks(action) {
   try {
-    const links = yield call(fetchLinksFromServer, action.topicName);
+    let links;
+    if(action.topicName === 'About') {
+      links = yield call(fetchLinksFromServer, action.topicName);
+      const expLinks = yield call(fetchLinksFromServer, 'Experience');
+      links = links.concat(expLinks);
+
+      console.log(links);
+    } else {
+      links = yield call(fetchLinksFromServer, action.topicName);
+    }
     yield put(requestLinksSucceeded(links));
   } catch (e) {
     yield put(requestLinksFailed(e.message));

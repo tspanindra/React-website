@@ -1,6 +1,5 @@
 import { createSelector } from 'reselect';
 import selectNavigationContainer from '../NavigationContainer/selectors';
-
 /**
  * Direct selector to the linkListContainer state domain
  */
@@ -21,6 +20,14 @@ const selectTopic = () => createSelector(
       name: '',
     };
   });
+  
+const getDrawerOpen = () => createSelector(
+  selectNavigationContainer(),
+  (navigationState) => {
+    return navigationState.isDrawerOpen;
+  }
+);
+
 /**
  * Default selector used by LinkListContainer
  */
@@ -28,7 +35,8 @@ const selectTopic = () => createSelector(
 const selectLinkListContainer = () => createSelector(
   selectLinkListContainerDomain(),
   selectTopic(),
-  (substate, topic) => Object.assign(substate.toJS(), { topicName: topic.name })
+  getDrawerOpen(),
+  (substate, topic, isDrawerOpen) => Object.assign(substate.toJS(), { topicName: topic.name, isDrawerOpen })
 );
 
 export default selectLinkListContainer;

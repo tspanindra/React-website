@@ -1,5 +1,6 @@
 .linkList { /* stylelint-disable */
-
+    align-items: center;
+    justify-content: center;
 }
 
 .button {
@@ -19,6 +20,9 @@
     }
 }
 
+.heading {
+    margin-left: 30px
+}
 .icon {
     color: white
 }

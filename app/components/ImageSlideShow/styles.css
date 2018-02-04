@@ -1,0 +1,6 @@
+.img {
+  display: flex;
+  border-radius: 50%;
+  align-self: center;
+  justify-content: center;
+}

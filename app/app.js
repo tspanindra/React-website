@@ -19,7 +19,6 @@ import { Provider } from 'react-redux';
 import { applyRouterMiddleware, Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import useScroll from 'react-router-scroll';
-import LanguageProvider from 'containers/LanguageProvider';
 import configureStore from './store';
 
 // Import i18n messages
@@ -51,11 +50,9 @@ const rootRoute = {
   childRoutes: createRoutes(store),
 };
 
-
 const render = (translatedMessages) => {
   ReactDOM.render(
     <Provider store={store}>
-      <LanguageProvider messages={translatedMessages}>
         <Router
           history={history}
           routes={rootRoute}
@@ -65,7 +62,6 @@ const render = (translatedMessages) => {
             applyRouterMiddleware(useScroll())
           }
         />
-      </LanguageProvider>
     </Provider>,
     document.getElementById('app')
   );

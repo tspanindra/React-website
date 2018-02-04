@@ -10,23 +10,16 @@ import Drawer from '../Drawer';
 import styles from './styles.css';
 
 function Navigation({ topics, selectTopic, toggleDrawer, isDrawerOpen, email }) {
-  const topicNodes = topics.map(t => (
-    <div key={t.name} onClick={() => selectTopic(t)}>
-      {t.name}
-    </div>
-  ));
-
   return (
     <div className={styles.navigation}>
-    <AppBar toggleDrawer= {toggleDrawer} email={email}/>
-    <Drawer
-    items = {topics}
-    selectItem = {selectTopic}
-    itemLabelAttr = "name"
-    itemKey = "name"
-    isDrawerOpen = {isDrawerOpen}
-    />
-      {/* {topicNodes} */}
+      <AppBar toggleDrawer= {toggleDrawer} email={email}/>
+      <Drawer
+        items = {topics}
+        selectItem = {selectTopic}
+        itemLabelAttr = "name"
+        itemKey = "name"
+        isDrawerOpen = {isDrawerOpen}
+      />
     </div>
   );
 }

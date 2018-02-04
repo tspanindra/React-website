@@ -9,6 +9,8 @@ import { connect } from 'react-redux';
 import selectLinkListContainer from './selectors';
 import LinkList from '../../components/LinkList';
 import { requestLinks, startAdd } from './actions';
+import { toggleDrawer } from '../NavigationContainer/actions';
+// import ImageSlideShow from '../../Components/ImageSlideShow';
 
 export class LinkListContainer extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -17,6 +19,11 @@ export class LinkListContainer extends React.Component { // eslint-disable-line 
     requestLinks: React.PropTypes.func.isRequired 
   }
   
+  onHomeClick = () => {
+    if(this.props.isDrawerOpen)
+      this.props.toggleDrawer();
+  }
+
   componentWillMount() {
     this.props.requestLinks(this.props.topicName)
   }
@@ -29,7 +36,11 @@ export class LinkListContainer extends React.Component { // eslint-disable-line 
 
   render() {
     return (
-      <LinkList {...this.props}/>
+      
+      <div onClick={this.onHomeClick}>
+        {/* { this.props.topicName=== 'About' && <ImageSlideShow /> } */}
+        <LinkList {...this.props}/>
+      </div>
     );
   }
 }
@@ -40,6 +51,7 @@ function mapDispatchToProps(dispatch) {
   return {
     requestLinks: (topicName) => dispatch(requestLinks(topicName)),
     startAdd: (topicName) => dispatch(startAdd(topicName)), 
+    toggleDrawer: () => dispatch(toggleDrawer())
   };
 }
 
