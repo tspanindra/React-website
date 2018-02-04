@@ -32,14 +32,14 @@ class SlideShow extends PureComponent {
     return (
       <div>
       <div className={styles.slideshow}>
-        {/*<ReactCSSTransitionGroup
-          className="group"
-          transitionName="fade"
-          transitionEnterTimeout={800}
-          transitionLeaveTimeout={800}
-        > */}
+        <ReactCSSTransitionGroup
+          transitionEnterTimeout={1000}
+          transitionLeaveTimeout={1000}
+          transitionName="slide">
+          <div className="slide">
           {Children.toArray(children)[this.state.current]}
-       {/* </ReactCSSTransitionGroup> */}
+          </div>
+        </ReactCSSTransitionGroup>
         </div>
         <div className={styles.bullets}>{bullets}</div>
       </div>

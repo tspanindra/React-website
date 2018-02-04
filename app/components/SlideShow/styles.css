@@ -62,3 +62,36 @@
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
+
+.slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 150px;
+  margin: 10px;
+  position: absolute;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  width: 150px;
+}
+.slide-enter {
+  opacity: 0;
+}
+.slide-enter-active {
+  opacity: 1;
+}
+.slide-leave {
+  opacity: 1;
+}
+.slide-leave-active {
+  opacity: 0;
+}
+.slide__container {
+  position: relative;
+}
