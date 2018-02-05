@@ -26,3 +26,11 @@
 .icon {
     color: white
 }
+
+.search {
+    width: 100%;
+}
+
+.dropDown {
+    float:left;
+}

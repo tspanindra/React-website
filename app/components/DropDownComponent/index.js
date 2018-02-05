@@ -11,32 +11,44 @@ import "react-dropdown/style.css";
 const DropDownComponent = (props) => {
   const getDropdownOptions = () => {
     const options = [];
+    if(props.showCategory) {
+      options.push("Select Category");
+    } else {
+      options.push("Select Project"); 
+    }
+
     if(props.links && props.links.length > 0) {
-      options.push("Select a project");
-      props.links.map(link => { 
-        options.push(link.title);
+      props.links.map(link => {
+        if(props.showCategory && link.category) {
+          options.push(link.category);
+        } else {
+          options.push(link.title);
+        }
       }); 
     } 
     return options;
   }
   
   const onSelectDropDown = (event) => {
-    const selLink = props.links.filter(link => link.title === event.value);
+    const selLink = props.links.filter(link => {
+      if(props.showCategory && link.category) {
+        return link.category === event.value;
+      } else {
+        return link.title === event.value 
+      }
+    })
     if(selLink.length > 0) {
       props.setLinks(selLink);
     } else {
       props.setLinks(props.links); 
     }
   }
-
-  const defaultOption = getDropdownOptions()[0];
-
   return (
     <Dropdown 
       options={getDropdownOptions()} 
       onChange={onSelectDropDown} 
-      value= {defaultOption}
-      placeholder="Select a project" />
+      value= {getDropdownOptions()[0]}
+      placeholder={props.placeholder} />
   );
 }
 
@@ -49,7 +61,9 @@ DropDownComponent.propTypes = {
       id: React.PropTypes.string.isRequired
     })
   ),
-  setLinks: React.PropTypes.func.isRequired
+  setLinks: React.PropTypes.func.isRequired,
+  placeholder: React.PropTypes.string,
+  showCategory: React.PropTypes.bool 
 };
 
 export default DropDownComponent;

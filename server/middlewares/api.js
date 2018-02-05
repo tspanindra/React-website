@@ -54,6 +54,7 @@ function setupDb() {
   db.get('links').push({
     description: 'Networking application which aims at controlling the network traffic by defining and controlling the network functionality - based on the information gathered using Deep Packet Inspection.',
     title: 'Online Food Order System',
+    category: 'android/web',
     url: 'https://github.com/Meghu2793/Data-Analysis-on-PIMA-Indian-Diabetes-Database',
     topicName: topic2.name,
     id: uuid(),
@@ -65,6 +66,7 @@ function setupDb() {
     Used Firebase Cloud Storage to store all the user profile pictures. Managing the user profile by allowing the user to update the profile anywhere. \
     Implemented Friends module same as Facebook Friend Module.',
     title: 'Friend Me!',
+    category: 'android/web',
     topicName: topic2.name,
     id: uuid(),
   }).value();
@@ -74,6 +76,7 @@ function setupDb() {
     Implemented Google sign-in using OAuth allowing the user to access their Home page from any user device. \
     NodeJS is used in the backend with Express framework and mongoose to access MongoDB database.',
     title: 'Camping',
+    category: 'android/web',
     topicName: topic2.name,
     id: uuid(),
   }).value();
@@ -82,6 +85,7 @@ function setupDb() {
     description: 'Data analysis techniques to create visualizations and interpret models to uncover the reason for high diabetic outcome amongst the PIMA Indian Pregnant women. \
       The project covered domain understanding, data preparation, EDA, statistical analysis, modelling, evaluation and finding unique patterns of the data in R.',
     title: 'DA on Healthcare Database',
+    category: 'Data science',
     topicName: topic2.name,
     id: uuid(),
   }).value();
@@ -92,6 +96,7 @@ function setupDb() {
     Developed statistical model to predict the future data related jobs’ LCAs using Multiple Linear Regression in spark.',
     title: 'LCA (Labor Condition Application) Decision Prediction using Spark',
     topicName: topic2.name,
+    category: 'Data science',
     id: uuid(),
   }).value();
 
@@ -100,6 +105,7 @@ function setupDb() {
     title: 'Sentimental Analysis on Twitter',
     url: 'https://github.com/Meghu2793/TextAnalytics',
     topicName: topic2.name,
+    category: 'Data science',
     id: uuid(),
   }).value();
 
@@ -108,6 +114,7 @@ function setupDb() {
     corpus composed of 200,000 files by involving several different MapReduce passes used sequentially to Create a Link Graph, Process PageRank, Cleanup and Sorting which ultimately results the page-rank of all Wikipedia pages.',
     title: 'Google’s PageRank Implementation on Wikipedia Document',
     topicName: topic2.name,
+    category: 'Data science',
     id: uuid(),
   }).value();
 
@@ -116,6 +123,7 @@ function setupDb() {
     title: 'Email Categorization',
     url: 'https://github.com/Meghu2793/TextAnalytics',
     topicName: topic2.name,
+    category: 'Data science',
     id: uuid(),
   }).value();
 
@@ -124,6 +132,7 @@ function setupDb() {
     title: 'Data Analysis on Netflix Movie Recommendation',
     url: 'https://github.com/Meghu2793/TextAnalytics',
     topicName: topic2.name,
+    category: 'Data science',
     id: uuid(),
   }).value();
 
@@ -131,6 +140,7 @@ function setupDb() {
     description: 'Networking application which aims at controlling the network traffic by defining and controlling the network functionality - based on the information gathered using Deep Packet Inspection.',
     title: 'Quality Of service using SDN',
     url: 'https://github.com/Meghu2793/SoftwareDefinedNetwork',
+    category: 'Networking',
     topicName: topic2.name,
     id: uuid(),
   }).value();

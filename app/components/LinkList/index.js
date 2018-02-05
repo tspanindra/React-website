@@ -45,10 +45,18 @@ class LinkList extends React.Component {
         { topicName=== 'About' && <ImageSlideShow /> }
 
         {topicName === "Projects" && (
-          <div>
+          <div className={styles.search}>
+          
+              <DropDownComponent 
+                links={this.props.links}
+                setLinks={this.setLinks}
+                placeholder="Select a project"/>
+
             <DropDownComponent 
               links={this.props.links}
-              setLinks={this.setLinks}/>
+              setLinks={this.setLinks}
+              showCategory={true}
+              placeholder="Select Category"/>
 
             <SearchComponent
               links={this.props.links}
