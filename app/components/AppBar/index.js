@@ -30,7 +30,7 @@ function AppBar({ toggleDrawer, email }) {
       <div 
         className={styles.linkContainer}
         > 
-        {loginLink}
+        {/* {loginLink} */}
       </div>
 
     </div>
