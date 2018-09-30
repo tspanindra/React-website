@@ -26,7 +26,7 @@ const logger = {
 
     console.log(`
 ${chalk.bold('Access URLs:')}${divider}
-Localhost: ${chalk.magenta(`http://localhost:${port}`)}
+Localhost: ${chalk.magenta(`http://35.174.73.149:${port}`)}
       LAN: ${chalk.magenta(`http://${ip.address()}:${port}`) +
 (tunnelStarted ? `\n    Proxy: ${chalk.magenta(tunnelStarted)}` : '')}${divider}
 ${chalk.blue(`Press ${chalk.italic('CTRL-C')} to stop`)}

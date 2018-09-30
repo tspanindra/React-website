@@ -7,7 +7,7 @@ import { push } from 'react-router-redux';
 import selectNavigationContainer from './selectors';
 
 export function fetchTopicsfromServer() {
-  return fetch('http://localhost:3000/api/topics')
+  return fetch('http://35.174.73.149:3000/api/topics')
   .then(response => response.json())
   .catch(r => console.log('failed', r));
 }

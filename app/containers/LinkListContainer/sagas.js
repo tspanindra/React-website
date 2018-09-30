@@ -5,7 +5,7 @@ import { REQUEST_LINKS, START_ADD } from './constants';
 import { push } from 'react-router-redux';
 
 function fetchLinksFromServer(topicName) {
-  return fetch(`http://localhost:3000/api/topics/${topicName}/links`)
+  return fetch(`http://35.174.73.149:3000/api/topics/${topicName}/links`)
   .then(response => response.json())
 }
 
