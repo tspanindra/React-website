@@ -28,40 +28,51 @@ function setupDb() {
     description: 'links to programming related news articles',
   };
 
-  const topic5 = {
-    name: 'Contact',
-    description: 'links to programming related news articles',
-  };
-
+  // const topic5 = {
+  //   name: 'Contact',
+  //   description: 'links to programming related news articles',
+  // };
 
   db.get('topics').push(topic1).value();
   db.get('topics').push(topic2).value();
   db.get('topics').push(topic3).value();
   db.get('topics').push(topic4).value();
-  db.get('topics').push(topic5).value();
+  //db.get('topics').push(topic5).value();
 
   db.get('links').push({
-    description: 'I am a Computer Science Graduate Student from University of North Carolina, having 4 years of academic & 1.5 years of Industry experience in programming, \
-    I am an avid learner and an enthusiastic developer with experience in Mobile & Web application development! \
-    Also gained hands on experience in Cloud Computing frameworks like Hadoop MapReduce, Apache Spark and Machine Learning.\
-    My technical and research interests are in the areas of Mobile/ Web development and Data Science. I believe syncing work cognitively and physically will expand the idea of "success" immensely.',
+    description: 'I am a computer science graduate student having 4 years of academic experience & \
+    2 years of work experience in software development, I am an avid learner and an enthusiastic developer \
+    with experience in Web/Mobile Application Development, Hadoop, MapReduce, & Apache Spark!. \
+    Also gained hands-on experience in Data Analysis and Machine Learning. I believe \
+    syncing work cognitively and physically will expand the idea of "success" immensely.',
     topicName: topic1.name,
     showFlashCard: true,
     id: uuid(),
   }).value();
 
+  // db.get('links').push({
+  //   description: 'Networking application which aims at controlling the network traffic by defining and controlling the network functionality - based on the information gathered using Deep Packet Inspection.',
+  //   title: 'Online Food Order System',
+  //   // category: 'android/web',
+  //   category: 'software networks',
+  //   url: 'https://github.com/Meghu2793/Data-Analysis-on-PIMA-Indian-Diabetes-Database',
+  //   topicName: topic2.name,
+  //   id: uuid(),
+  // }).value();
 
   db.get('links').push({
-    description: 'Networking application which aims at controlling the network traffic by defining and controlling the network functionality - based on the information gathered using Deep Packet Inspection.',
-    title: 'Online Food Order System',
+    description: 'Developed a web-based application called “Developers Platform”, a social \
+    media application for developers. ReactJS with Redux is used in front-end development and Node.JS \
+    Express framework is used for server side.',
+    title: 'Developers Platform',
+    //url: 'https://github.com/Meghu2793',
     category: 'android/web',
-    url: 'https://github.com/Meghu2793/Data-Analysis-on-PIMA-Indian-Diabetes-Database',
     topicName: topic2.name,
     id: uuid(),
   }).value();
 
   db.get('links').push({
-    description: 'A social networking application where a user could make friends and post messages. \
+    description: 'A social networking android app where a user could make friends and post messages. \
     Implemented Firebase Auth and Google Sign in for users to Login from any device and Firebase Real-time database to store all logged-in users. \
     Used Firebase Cloud Storage to store all the user profile pictures. Managing the user profile by allowing the user to update the profile anywhere. \
     Implemented Friends module same as Facebook Friend Module.',
@@ -72,10 +83,11 @@ function setupDb() {
   }).value();
 
   db.get('links').push({
-    description: 'A social media application to post their experience and feedback on different campgrounds they visit by adding photos and comments on it which would be visible to rest other users who can also comment on top of it, sharing each other’s experience. \
+    description: 'A social media web application to post their experience and feedback on different campgrounds they visit by adding photos and comments on it which would be visible to rest other users who can also comment on top of it, sharing each other’s experience. \
     Implemented Google sign-in using OAuth allowing the user to access their Home page from any user device. \
     NodeJS is used in the backend with Express framework and mongoose to access MongoDB database.',
     title: 'Camping',
+    url: 'https://github.com/Meghu2793/Camping',
     category: 'android/web',
     topicName: topic2.name,
     id: uuid(),
@@ -83,8 +95,9 @@ function setupDb() {
 
   db.get('links').push({
     description: 'Data analysis techniques to create visualizations and interpret models to uncover the reason for high diabetic outcome amongst the PIMA Indian Pregnant women. \
-      The project covered domain understanding, data preparation, EDA, statistical analysis, modelling, evaluation and finding unique patterns of the data in R.',
-    title: 'DA on Healthcare Database',
+      The project covered domain understanding, data preparation, Exploratory data analysis (EDA), statistical analysis, modelling, evaluation and finding unique patterns of the data in R.',
+    title: 'Data Analysis on Healthcare Database',
+    url: 'https://github.com/Meghu2793/Data-Analysis-on-PIMA-Indian-Diabetes-Database',
     category: 'Data science',
     topicName: topic2.name,
     id: uuid(),
@@ -94,7 +107,7 @@ function setupDb() {
     description: 'Predict Labor Condition Approval using the USCIS and Department of Labor dataset from 2011 - 2016 consisted of 3 million records. \
     Analyzed, extracted, cleaned and preprocessed the data and implemented own Logistic Regression classifier in PySpark to predict LCA decision with 75.27% accuracy.\
     Developed statistical model to predict the future data related jobs’ LCAs using Multiple Linear Regression in spark.',
-    title: 'LCA (Labor Condition Application) Decision Prediction using Spark',
+    title: 'LCA (Labor Condition Approval) Decision Prediction using Spark',
     topicName: topic2.name,
     category: 'Data science',
     id: uuid(),
@@ -113,6 +126,7 @@ function setupDb() {
     description: 'A Hadoop MapReduce Application which aims at computing PageRank on set of pre-processed version of Wikipedia \
     corpus composed of 200,000 files by involving several different MapReduce passes used sequentially to Create a Link Graph, Process PageRank, Cleanup and Sorting which ultimately results the page-rank of all Wikipedia pages.',
     title: 'Google’s PageRank Implementation on Wikipedia Document',
+    url: 'https://github.com/Meghu2793/PageRank',
     topicName: topic2.name,
     category: 'Data science',
     id: uuid(),
@@ -146,9 +160,31 @@ function setupDb() {
   }).value();
 
   db.get('links').push({
-    description: '➤Authored an efficient UI framework consisting of themes and UI Components using Bootstrap and CSS which was used by UI developers across bank with all the portals being developed. The framework was built to be responsive across all the browsers \
+    description: ' ➤ Designed and developed RESTful APIs in ASP.Net Web API framework with MSSQL database in \
+    the back-end for DEKA Employee directory and Indoor Maps application. \
+    ➤ Worked on Dashboards and Search Tool application in Antlr4.0, JavaScript, and HTML5.',
+    title: 'Deka Research: Software Engineer Intern',
+    topicName: topic3.name,
+    showFlashCard: true,
+    id: uuid(),
+  }).value();
+
+  db.get('links').push({
+    description: '➤ Developed RESTful back-end services for a sports analytics application using Node-Express \
+    web framework for Twitter-live streaming, the daily scoreboard of NBA, NFL sports. MySQL database is used in the back-end. \
+    ➤ Full stack development of website’s header using React-Router, React-Parallax, React-Bootstrap.\
+    React-Axios npm module is used for ajax call in front-end. Passport.js is an authentication middleware used for Sign up and Login. \
+    Nginx is used as a cache to serve the static HTML pages to improve the performance.',
+    title: 'ProLytics: Software Developer Intern',
+    topicName: topic3.name,
+    showFlashCard: true,
+    id: uuid(),
+  }).value();
+
+  db.get('links').push({
+    description: '➤ Authored an efficient UI framework consisting of themes and UI Components using Bootstrap and CSS which was used by UI developers across bank with all the portals being developed. The framework was built to be responsive across all the browsers. \
     ➤ Developed dynamic and responsive web pages using HTML5, CSS3, Bootstrap, Ajax, JQuery, JavaScript & Angular JS. \
-    ➤Worked on REST API design and implementation which fetched data from a relational database.',
+    ➤ Worked on REST API design and implementation which fetched data from a relational database.',
     title: 'Societe Generale: Software Engineer',
     topicName: topic3.name,
     showFlashCard: true,
@@ -156,27 +192,38 @@ function setupDb() {
   }).value();
 
   db.get('links').push({
-    description: '➤Authored high-quality documentation which is used by Atkins Library’s Software developers. \
-    ➤Contributed to software development team by leveraging the data from 3rd party APIs to MYSQL database in PHP, thereby cutting the vendor cost.',
-    title: 'Technical Documentation Intern: UNCC',
+    description: '➤ Designed and maintained MySQL database & developed NodeJS scripts to leverage the Library data from 3rd party APIs (OCLC).\
+    ➤ Worked on ex-libris apis for managing library inventory and bibliographic records.',
+    title: 'Developer Intern: University of North Carolina',
     topicName: topic3.name,
     showFlashCard: true,
     id: uuid(),
   }).value();
 
-  db.get('links').push({
-    description: 'ProLytics: \
-    Develop a full fledge Applicatin in React, Express and anlaytics!',
-    title: 'Web Developer Intern',
-    topicName: topic3.name,
-    showFlashCard: true,
-    id: uuid(),
-  }).value();
 
   db.get('links').push({
-    description: 'Courses Completed: \
-    Algorithms and Data Structures, KnowledgeDiscovery in Databases, Software system Design and Implementation, Cloud computing for data analysis, Mobile Application development, Machine Learning',
-    title: 'Masters in Computer Science and Engineering (Jan 2017 - Dec 2018)',
+    description: 'Proficient in Algorithms and Data Structures which refined my problem-solving approach.\
+    Followed Agile methodology for the development of multiple Mobile & Web Applications.\
+    Specialized in the field of Data Science and Application development. Gained hands-on experience in Mobile app development, Hadoop MapReduce, Apache Spark and Machine Learning.\
+    The range of projects I have worked on instilled the confidence to take up bigger challenges and come up with effective solutions.\
+    \
+    GPA: 4.0 / 4.0. \
+    Course Work:\
+    First semester:\
+    ♦ Algorithms and Data structures\
+    ♦ Software System and Design Implementation\
+    ♦ Knowledge Discovery in Database Systems\
+    \
+    Second semester:\
+    ♦ Mobile Application Development\
+    ♦ Cloud Computing\
+    ♦ Machine Learning\
+    \
+    Third Semester:\
+    ♦ Database Systems\
+    ♦ Network-Based Application development\
+    ♦ Survey of Programming languages',
+    title: 'Master of Science in Computer Science (Jan 2017 - Dec 2018)',
     url: 'https://www.uncc.edu/',
     topicName: topic4.name,
     id: uuid(),
@@ -184,7 +231,8 @@ function setupDb() {
 
   db.get('links').push({
     description: 'Courses Completed: \
-    Database Systems, Java, Object Oriented Programming (OOP), Software Engineering, Data Structures, Computer Networks, Web application development',
+    Database Systems, Java, Object Oriented Programming (OOP), Software Engineering, Data Structures, Computer Networks, Web application development.\
+    GPA: 8.72 / 10.00.',
     title: 'Bachelors in Computer Science and Engineering (Sep 2011 - Jun 2015)',
     url: 'http://www.sit.ac.in/',
     topicName: topic4.name,

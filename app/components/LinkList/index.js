@@ -65,12 +65,12 @@ class LinkList extends React.Component {
         )}
         {this.linkNodes()}
 
-        <IconButton
-          icon="plus"
+        {/* <IconButton
+          // icon="plus"
           buttonClass={styles.button}
           iconClass={styles.icon}
           onClick={() => startAdd(topicName)}
-        />
+        /> */}
 
         {children}
       </div>
