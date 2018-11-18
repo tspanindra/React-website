@@ -3,11 +3,16 @@ import { takeLatest } from 'redux-saga';
 import { requestLinksSucceeded, requestLinksFailed } from './actions';
 import { REQUEST_LINKS, START_ADD } from './constants';
 import { push } from 'react-router-redux';
-import Config from '../../config';
+const ec2 = require('ec2-publicip');
 
 function fetchLinksFromServer(topicName) {
-  return fetch(`http://${Config.host}:3000/api/topics/${topicName}/links`)
-  .then(response => response.json())
+  return ec2.getPublicIP((error, ip) => {
+    if (error) {
+      console.log(error);
+    }
+    return fetch(`http://${ip}:3000/api/topics/${topicName}/links`)
+    .then(response => response.json())
+  });
 }
 
 function* fetchLinks(action) {

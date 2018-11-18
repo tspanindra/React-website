@@ -12,13 +12,13 @@ function* addLink(action) {
     yield put(addLinkSuccess(serverLink));
     yield put(goBack());
   } catch (e) {
-    yield put(addLinkFailure(action.link, e.meessage)); 
+    yield put(addLinkFailure(action.link, e.meessage));
   }
 }
 
 // Individual exports for testing
 export function* addLinkSaga() {
-  yield* takeLatest(ADD_LINK, addLink)
+  yield* takeLatest(ADD_LINK, addLink);
 }
 
 export function* addLinkCancelledSaga() {
@@ -28,5 +28,5 @@ export function* addLinkCancelledSaga() {
 // All sagas to be loaded
 export default [
   addLinkSaga,
-  addLinkCancelledSaga
+  addLinkCancelledSaga,
 ];

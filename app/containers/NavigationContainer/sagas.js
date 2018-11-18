@@ -5,12 +5,17 @@ import { REQUEST_TOPICS, SELECT_TOPIC, REQUEST_TOPICS_SUCCEEDED } from './consta
 import {requestTopicsSucceeded, requestTopicsFailed, requestTopicsSuccedded } from './actions';
 import { push } from 'react-router-redux';
 import selectNavigationContainer from './selectors';
-import Config from '../../config';
+const ec2 = require('ec2-publicip');
 
 export function fetchTopicsfromServer() {
-  return fetch(`http://${Config.host}3000/api/topics`)
-  .then(response => response.json())
-  .catch(r => console.log('failed', r));
+  return ec2.getPublicIP((error, ip) => {
+    if (error) {
+      console.log(error);
+    }
+    return fetch(`http://${ip}3000/api/topics`)
+      .then(response => response.json())
+      .catch(r => console.log('failed', r));
+  });
 }
 
 function* fetchTopics() {
