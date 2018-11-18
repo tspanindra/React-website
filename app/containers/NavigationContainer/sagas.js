@@ -5,9 +5,10 @@ import { REQUEST_TOPICS, SELECT_TOPIC, REQUEST_TOPICS_SUCCEEDED } from './consta
 import {requestTopicsSucceeded, requestTopicsFailed, requestTopicsSuccedded } from './actions';
 import { push } from 'react-router-redux';
 import selectNavigationContainer from './selectors';
+import Config from '../../config';
 
 export function fetchTopicsfromServer() {
-  return fetch('http://35.174.73.149:3000/api/topics')
+  return fetch(`http://${Config.host}3000/api/topics`)
   .then(response => response.json())
   .catch(r => console.log('failed', r));
 }

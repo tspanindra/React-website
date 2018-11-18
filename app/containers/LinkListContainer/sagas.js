@@ -3,9 +3,10 @@ import { takeLatest } from 'redux-saga';
 import { requestLinksSucceeded, requestLinksFailed } from './actions';
 import { REQUEST_LINKS, START_ADD } from './constants';
 import { push } from 'react-router-redux';
+import Config from '../../config';
 
 function fetchLinksFromServer(topicName) {
-  return fetch(`http://35.174.73.149:3000/api/topics/${topicName}/links`)
+  return fetch(`http://${Config.host}:3000/api/topics/${topicName}/links`)
   .then(response => response.json())
 }
 
